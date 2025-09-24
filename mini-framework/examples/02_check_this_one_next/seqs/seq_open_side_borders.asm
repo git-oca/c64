@@ -62,7 +62,7 @@ seq_open_side_borders: {
         lda #DARK_GREY
         sta $d020
 
-        // sprite 0 data
+        // sprite 7 data
         //lda #$aa // just a few vertical lines for testing...
         .for (var i = 0; i< 63; i++) {
             lda sprite_data+i
@@ -70,23 +70,23 @@ seq_open_side_borders: {
         }
 
         lda #sprite7/64                
-        sta $07F8 + 7  //sprite 0 memory location
+        sta $07F8 + 7  //sprite 7 memory location
 
-        lda # SPRITE_Y_POS // sprite 0 pos y
+        lda # SPRITE_Y_POS // sprite 7 pos y
         sta $d001 +7*2
 
-        lda #90 // sprite 0 pos x
+        lda #90 // sprite 7 pos x
         sta $d000 + 7*2
 
-        lda #%1000_0000                 // X-Pos for Sprite 0 > 255
+        lda #%1000_0000                 // X-Pos for Sprite 7 > 255
         sta $D010
 
         
         
         lda #YELLOW
-        sta $d027 + 7// sprite 0 color
+        sta $d027 + 7// sprite 7 color
 
-        lda #%1000_0000  // enable sprite 0 
+        lda #%1000_0000  // enable sprite 7 
         sta $d015 
 }
 
