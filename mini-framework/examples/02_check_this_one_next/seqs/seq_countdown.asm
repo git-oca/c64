@@ -9,7 +9,7 @@ seq_countdown: {
     !do_init:
       
       
-      lda #10 // inc slow counter once every 32 frames
+      lda #10 // inc slow counter once every 10 frames
       sta __seq_slow_counter_factor
       jmp !end+ 
     
