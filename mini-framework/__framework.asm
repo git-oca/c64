@@ -172,7 +172,7 @@ empty_irq:
     dex         // 2
     bne *-1     // 3 / 2 if no jump                       
                 // so far: 2 + 9x(2+3 "jump") + 1x(2+2 "no jump") = 51
-    nop         // ==> 53
+   
 }
 
 .macro __return() {
